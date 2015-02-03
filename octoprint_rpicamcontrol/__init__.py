@@ -7,9 +7,7 @@ from __future__ import absolute_import
 
 import octoprint.plugin
 
-class RPiCamControlPlugin(octoprint.plugin.StartupPlugin, octoprint.plugin.AssetPlugin):
-  def on_after_startup(self):
-    self._logger.info("RPi Cam Control loaded")
+class RPiCamControlPlugin(octoprint.plugin.AssetPlugin):
   def get_assets(self):
     return dict(
       js=["js/script.js"]
